@@ -5,12 +5,14 @@
 */
 "use strict";
 
+//clear form fields, or see reset()
 function clearFormFields(obj) {
     for(let i = 0; i < obj.length; i++) {
         obj[i].value = "";
     }
 }
 
+//convert the input into a string
 function formToString(obj) {
     let str = "";
     for(let i = 0; i < obj.length; i++) {
@@ -19,15 +21,14 @@ function formToString(obj) {
     return str;
 }
 
+//assign all imgs with no alt a value
 function assignAlt(obj) {
     for(let i = 0; i < obj.length; i++) {
-        if(obj[i].getAttribute("alt") == null) {
-          obj[i].setAttribute("alt", "graffiti image");
-        }
-        //console.log(obj[i].getAttribute("alt"));
+        obj[i].setAttribute("alt", "graffiti image");
     }
 }
 
+//set the paragraph tag with the attribute value
 function setPfromImage(obj) {
     let str;
     for(let i = 0; i < obj.length; i++) {
@@ -38,10 +39,9 @@ function setPfromImage(obj) {
 }
 
 window.onload = function() {
-    let allImg = document.querySelectorAll("img");
+    let allImg = document.querySelectorAll("img:not([alt])");
+    let form = document.querySelector("form");
     assignAlt(allImg);
-
-    //for(let i = 0; i < allImg.length; i++) {console.log(allImg[i].getAttribute("alt"));}
 
     let allImg2 = document.images;
     setPfromImage(allImg2);
@@ -51,6 +51,7 @@ window.onload = function() {
         let myInfo = document.querySelectorAll(".myInfo");
 
         alert(formToString(myInfo));
-        clearFormFields(myInfo);
+        //clearFormFields(myInfo);
+        form.reset();
     }
 }
