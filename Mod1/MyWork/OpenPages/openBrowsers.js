@@ -5,6 +5,20 @@
 */
 "use strict";
 
+function helloLanguage (language) {
+    let str = "";
+    if(language == "es") {
+        str = "Hola Mundo";
+    }
+    else if(language == "de") {
+        str = "Hallo Welt";
+    }
+    else {
+        str = "Hello World;"
+    }
+    return str;
+}
+
 window.onload = function() {
     let googleBtn = document.getElementById("googleBtn");
     let hartfordBtn = document.getElementById("hartfordBtn");
@@ -15,33 +29,32 @@ window.onload = function() {
     let openLanguageBtn = document.getElementById("openLanguageBtn");
     let closeLanguageBtn = document.getElementById("closeLanguageBtn");
 
+    let language = navigator.language;
+
     //open homepages based on which button
     googleBtn.onclick = function () {
-        let params = "height=600, width=400";
+        let params = "height=600, width=800";
         window.open("https://www.google.com/", "google", params);
     }
     hartfordBtn.onclick = function () {
-        let params = "height=600, width=400";
+        let params = "height=600, width=800";
         window.open("https://www.thehartford.com/", "hartford", params);
     }
     w3schoolsBtn.onclick = function () {
-        let params = "height=600, width=400, top=250, left=100";
+        let params = "height=600, width=800, top=250, left=100";
         window.open("https://www.w3schools.com/js/", "w3schools", params);
     }
 
     //open and close browser based on language settings
     openLanguageBtn.onclick = function () {
-        let params = "height=600, width=400";
+        let params = "height=600, width=800";
         learnWin = window.open("helloEN.html", "learnWin", params);
 
         learnWin.focus();
+        alert(helloLanguage(language));
     }
+
     closeLanguageBtn.onclick = function () {
         learnWin.close();
-    }
-    learnWin.onload = function () {
-        
-        const msgDiv = helloEN.document.getElementById("msgDiv");
-        msgDiv.innerHTML = "<p>Hello World</p>";
     }
 }

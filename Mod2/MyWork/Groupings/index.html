@@ -8,18 +8,34 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Open Stuff</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <title>Tag Stuff</title>
   </head>
 
   <body>
     <main class="m-2">
-      <h1>Which home page do you want to open?</h1>
+      <h1>Groupings</h1>
       
       <!-- Open websites in new window -->
-      <div>
-        <input type="button" class="btn btn-primary m-2" id="googleBtn" name="google" value="Google" />
-        <input type="button" class="btn btn-primary m-2" id="hartfordBtn" name="hartford" value="Hartford" />
-        <input type="button" class="btn btn-primary m-2" id="w3schoolsBtn" name="w3schools" value="W3Schools" />
+      <div class="imageGroup">
+        <div>
+          <img src="images/queenStandard.png" alt="queen standard">
+        </div>
+        <p>Queen Standard</p>
+      </div>
+
+      <div class="imageGroup">
+        <div>
+          <img src="images/queenSuite.png" alt="queen suite">
+        </div>
+        <p>Queen Suite</p>
+      </div>
+
+      <div class="imageGroup">
+        <div>
+          <img src="images/kingStandard.png" alt="king standard">
+        </div>
+        <p>Queen Standard</p>
       </div>
 
       <!-- Open websites in new window based on language preference -->
@@ -29,8 +45,6 @@
       </div>
     </main>
 
-    <div id="msgDiv"></div>
-    
     <footer class="container">
       <hr>
       <p>&copy;Hartcode Academy 2019</p>
@@ -42,6 +56,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    <script src="openBrowsers.js"></script>
+    <script src="scripts/scripts.js"></script>
   </body>
 </html>
