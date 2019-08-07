@@ -8,39 +8,25 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <title>Set Stuff</title>
+    <title>Create Stuff</title>
   </head>
 
   <body>
     <main class="m-2">
       <!-- Open websites in new window -->
-      <h1>Picture Stuff</h1>
+      <h1>Create your adventure!</h1>
 
-      <div class="imageGroup">
-        <div>
-          <img id="image1">
-        </div>
+      <label for="rideOptions">Select your ride</label>
+      <select id="rideOptions">
+        <option value="0" selected>Choose Ride...</option>
+      </select>
+
+      <input type="button" class="btn btn-success" id="addBtn" value="Add" />
+      <button type="button" class="btn btn-secondary" id="clearBtn">Clear</button>
+
+      <div id="imagesDiv">
       </div>
 
-      <div class="imageGroup">
-        <div>
-          <img id="image2">
-        </div>
-      </div>
-
-      <div class="imageGroup">
-        <div>
-          <img id="image3">
-        </div>
-      </div>
-
-      <a id="larger" href="#">Larger</a>
-      <a id="smaller" href="#">Smaller</a>
-
-      <p>Text Text Text Text Text Text Text Text Text Text</p>
-      <p>Stuff Stuff Stuff Stuff Stuff Stuff Stuff Stuff Stuff</p>
-      <p>Example Example Example Example Example Example Example</p>
-      <p>End End End End End End End End End End End End End End</p>
     </main>
 
     <footer class="container">
